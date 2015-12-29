@@ -1,0 +1,14 @@
+language: python
+python: 2.7
+install:
+- pip install tox
+script:
+- tox -e flake8
+- tox -e isort
+- tox -e py35-tests
+- tox -e py27-tests
+after_success:
+- git config --global user.name "semantic-release"
+- git config --global user.email "semantic-release@travis"
+- python setup.py install
+- semantic-release publish
