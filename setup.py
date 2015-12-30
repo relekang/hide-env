@@ -1,7 +1,7 @@
 import re
 import sys
 
-from setuptools import find_packages, setup
+from setuptools import setup
 
 
 def _read_long_description():
@@ -36,8 +36,8 @@ setup(
     author_email='me@rolflekang.com',
     description='Hide environment variables from output.',
     long_description=_read_long_description(),
-    packages=find_packages(exclude='tests'),
     license='MIT',
+    py_modules=['hide_env'],
     install_requires=requirements,
     entry_points='''
         [console_scripts]
