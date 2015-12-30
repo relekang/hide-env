@@ -41,7 +41,7 @@ setup(
     install_requires=requirements,
     entry_points='''
         [console_scripts]
-        hide-env=hide_env:main
+        hide-env=hide_env:hide_env
     ''',
     include_package_data=True,
     classifiers=[
